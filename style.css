@@ -76,7 +76,22 @@ body {
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
-  
+  /* Adjusting the container for services to align items side by side */
+.service-container {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Allow wrapping if items don't fit */
+  gap: 1rem; /* Add spacing between items */
+  margin: 2rem 0;
+}
+
+/* Adjust service-box styles for consistency */
+.service-box {
+  flex: 1 1 calc(30% - 1rem); /* Set box to take ~30% of the width with gap adjustment */
+  min-width: 250px; /* Ensure minimum width for smaller screens */
+  max-width: 300px; /* Prevent excessive widening on larger screens */
+  box-sizing: border-box; /* Include padding and borders in size */
+}
   /* Calculator */
   .calculator-container {
     max-width: 500px;
