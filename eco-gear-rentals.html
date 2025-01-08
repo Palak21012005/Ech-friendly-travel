@@ -67,45 +67,50 @@
       </table>
     </section>
 
-    <!-- Tips Section -->
-    <section style="margin-bottom: 2rem;">
-      <h2 style="font-size: 1.8rem; text-align: center; margin-bottom: 1rem;">Tips for Sustainable Travel Gear Use</h2>
-      <ol style="font-size: 1.1rem; line-height: 1.8; padding-left: 1.5rem;">
-        <li>Carry your own reusable containers for food and beverages.</li>
-        <li>Choose compact, lightweight gear to save space and energy.</li>
-        <li>Opt for solar-powered devices when traveling to remote locations.</li>
-        <li>Recycle and properly dispose of any non-reusable items after use.</li>
-      </ol>
+    <!-- Query and Booking Forms Section -->
+    <section style="display: flex; gap: 2rem; margin: 2rem auto; max-width: 1000px;">
+      <!-- Query Form -->
+      <form style="flex: 1; background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+        <h3 style="text-align: center; margin-bottom: 1rem;">Send a Query</h3>
+        <label for="name" style="display: block; margin-bottom: 0.5rem;">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
+
+        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
+
+        <label for="query" style="display: block; margin-bottom: 0.5rem;">Query:</label>
+        <textarea id="query" name="query" placeholder="Write your query here..." required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;"></textarea>
+
+        <button type="submit" style="display: block; width: 100%; padding: 0.7rem; background: #4ca1af; color: white; border: none; border-radius: 4px; font-size: 1rem;">Submit</button>
+      </form>
+
+      <!-- Booking Form -->
+      <form style="flex: 1; background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+        <h3 style="text-align: center; margin-bottom: 1rem;">Book an Item</h3>
+        <label for="item" style="display: block; margin-bottom: 0.5rem;">Select Item:</label>
+        <select id="item" name="item" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
+          <option value="">-- Choose an Item --</option>
+          <option value="water_bottle">Reusable Water Bottle</option>
+          <option value="solar_charger">Solar Charger</option>
+          <option value="toiletries">Biodegradable Toiletries</option>
+        </select>
+
+        <label for="duration" style="display: block; margin-bottom: 0.5rem;">Select Duration:</label>
+        <select id="duration" name="duration" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
+          <option value="">-- Choose Duration --</option>
+          <option value="24_hours">24 Hours</option>
+          <option value="7_days">7 Days</option>
+          <option value="30_days">30 Days</option>
+        </select>
+
+        <label for="contact" style="display: block; margin-bottom: 0.5rem;">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Your Contact Number" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
+
+        <button type="submit" style="display: block; width: 100%; padding: 0.7rem; background: #4ca1af; color: white; border: none; border-radius: 4px; font-size: 1rem;">Book Now</button>
+      </form>
     </section>
 
-    <!-- Contact Section -->
-    <section>
-      <h2 style="font-size: 1.8rem; text-align: center; margin-bottom: 1rem;">Ready to Go Green?</h2>
-      <p style="font-size: 1.1rem; text-align: center; line-height: 1.6;">
-        Join the movement for sustainable travel. Rent eco-friendly gear today and make a difference. Contact us to learn more or to 
-        book your gear.
-      </p>
-      <p style="text-align: center; font-size: 1.2rem; font-weight: bold;">
-        Email: support@ecotravel.com | Phone: +91-987-654-3210
-      </p>
-    </section>
   </main>
-   <!-- Query Form -->
-   <form style="margin: 2rem auto; max-width: 500px; background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
-    <h3 style="text-align: center; margin-bottom: 1rem;">Send a Query</h3>
-    <label for="name" style="display: block; margin-bottom: 0.5rem;">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
-
-    <label for="email" style="display: block; margin-bottom: 0.5rem;">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;">
-
-    <label for="query" style="display: block; margin-bottom: 0.5rem;">Query:</label>
-    <textarea id="query" name="query" placeholder="Write your query here..." required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: none; border-radius: 4px;"></textarea>
-
-    <button type="submit" style="display: block; width: 100%; padding: 0.7rem; background: #4ca1af; color: white; border: none; border-radius: 4px; font-size: 1rem;">Submit</button>
-  </form>
-</section>
-</main>
 
   <!-- Footer -->
   <footer style="text-align: center; padding: 1rem; background: rgba(0, 0, 0, 0.8);">
