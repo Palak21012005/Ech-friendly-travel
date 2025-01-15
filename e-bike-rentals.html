@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Bike Rentals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: white;
+    }
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      background: #4ca1af;
+      border: none;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(to right, #2c3e50, #4ca1af); color: white;">
-
+<body>
   <!-- Header -->
   <header style="text-align: center; padding: 2rem; background: rgba(0, 0, 0, 0.7);">
     <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">E-Bike Rentals</h1>
@@ -101,7 +119,13 @@
         <!-- Booking Form -->
         <div style="flex: 1; background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px;">
           <h3 style="font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Book an Item</h3>
-          <form>
+          <form id="bookingForm">
+            <label for="name" style="font-size: 1.1rem;">Your Name:</label><br>
+            <input type="text" id="name" name="name" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" required><br>
+
+            <label for="mobile" style="font-size: 1.1rem;">Mobile Number:</label><br>
+            <input type="tel" id="mobile" name="mobile" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" pattern="[0-9]{10}" required><br>
+
             <label for="item" style="font-size: 1.1rem;">Select Item:</label><br>
             <select id="item" name="item" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" required>
               <option value="e-bike">E-Bike</option>
@@ -119,7 +143,7 @@
             <label for="start-date" style="font-size: 1.1rem;">Start Date:</label><br>
             <input type="date" id="start-date" name="start-date" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" required><br>
 
-            <button type="submit" style="width: 100%; padding: 0.5rem; background: #4ca1af; border: none; color: white; font-size: 1.1rem; border-radius: 4px;">Book Now</button>
+            <button type="button" onclick="submitBookingForm()">Book Now</button>
           </form>
         </div>
 
@@ -131,5 +155,17 @@
   <footer style="text-align: center; padding: 1rem; background: rgba(0, 0, 0, 0.8);">
     <p>© 2024 Eco-Friendly Travel Website. All rights reserved. | <a href="index.html" style="color: #4ca1af; text-decoration: none;">Back to Home</a></p>
   </footer>
+
+  <script>
+    function submitBookingForm() {
+      const name = document.getElementById('name').value;
+      const mobile = document.getElementById('mobile').value;
+      const item = document.getElementById('item').value;
+      const duration = document.getElementById('rental-duration').value;
+      const startDate = document.getElementById('start-date').value;
+
+        alert('Thank you for booking! Our team will contact you shortly.');
+    }
+  </script>
 </body>
 </html>
